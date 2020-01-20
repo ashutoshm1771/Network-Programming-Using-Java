@@ -1,3 +1,5 @@
+//Author : Ashutosh Mishra
+
 import java.net.*;
 class InetGetByName
 {
