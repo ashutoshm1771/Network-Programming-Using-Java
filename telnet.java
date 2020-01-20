@@ -6,8 +6,8 @@ importjava.util.*;
 public class telnet extends Thread
 {
 static Socket cs=null;
-staticPrintWriter pw=null;
-staticBufferedReaderbr=null,in=null;
+static PrintWriter pw=null;
+static BufferedReader br=null,in=null;
 public static void main(String args[])throws Exception
 {
 	System.out.println("TELNET");
@@ -40,9 +40,9 @@ static void open(String address,String port)throws Exception
 		br=new BufferedReader(new InputStreamReader(cs.getInputStream()));
 		pw=new PrintWriter(cs.getOutputStream(),true);
 		System.out.println("Connection Established");
-		newSendData(pw,in).start();
+		new SendData(pw,in).start();
 		
-		newReceiveData(br).start();
+		new ReceiveData(br).start();
 		
 		}catch(Exception e)
 		{
@@ -55,7 +55,7 @@ static class SendData extends telnet
 	{
 	PrintWriter pw=null;
 	BufferedReader in=null;
-	SendData(PrintWriterp,BufferedReader b)
+	SendData(PrintWriter p,BufferedReader b)
 	{
 	pw=p;
 	in=b;
