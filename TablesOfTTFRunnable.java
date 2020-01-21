@@ -1,3 +1,5 @@
+//Author : Ashutosh Mishra
+
 import java.lang.*;
 class TwoTable implements Runnable
 {
