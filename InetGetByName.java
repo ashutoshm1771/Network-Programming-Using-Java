@@ -1,5 +1,5 @@
 //Author : Ashutosh Mishra
-
+//Simple demonstration program
 import java.net.*;
 class InetGetByName
 {
