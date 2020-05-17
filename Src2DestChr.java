@@ -1,7 +1,6 @@
+// Author : Ashutosh Mishra
+
 import java.io.*;
- 
-
-
  
 public class Src2DestChr {
 	public static void main(String args[]){
