@@ -3,7 +3,7 @@
 
 import java.io.*;
 import java.net.*;
-importjava.util.*;
+import java.util.*;
 public class telnet extends Thread
 {
 static Socket cs=null;
