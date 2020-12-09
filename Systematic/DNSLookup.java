@@ -1,3 +1,5 @@
+//Author : Ashutosh Mishra
+
 import javax.naming.directory.Attributes;
 import javax.naming.directory.InitialDirContext;
 import javax.naming.NamingEnumeration;
