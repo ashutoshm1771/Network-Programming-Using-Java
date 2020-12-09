@@ -45,11 +45,9 @@ while(true)
 String msg=stdin.readLine();
 pw.println(msg);
 pw.flush();
-if(msg.equals("bye"))
-break;
+if(msg.equals("bye")) break;
 }
 }
-catch(IOException ex)
-{}
+catch(Exception ex){}
 }
 }

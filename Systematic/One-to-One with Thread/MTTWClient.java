@@ -1,5 +1,6 @@
 import java.io.*;
 import java.net.*;
+
 public class MTTWClient extends Thread
 {
 static Socket cs=null;
@@ -16,17 +17,17 @@ is.start();
 while(true)
 {
 String msg=in.readLine();
-if(msg.equals("bye"))
-break;
+if(msg.equals("bye")) break;
 else System.out.println(msg);
 }
 }
 catch(Exception e){}
 }
 }
+
 class InputScan extends Thread
 {
-DataInputStream stdin=new DataInputStream(System.in);
+BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
 Socket cs=null;
 InputScan(Socket s)
 {
@@ -42,11 +43,9 @@ while(true)
 String msg=stdin.readLine();
 out.println(msg);
 out.flush();
-if(msg.equals("bye"))
-break;
+if(msg.equals("bye")) break;
 }
 }
-catch(Exception e)
-{}
+catch(Exception e) {}
 }
 }
