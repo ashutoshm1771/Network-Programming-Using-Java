@@ -1,11 +1,12 @@
+// Author : Ashutosh Mishra
+
 import java.io.*;
 import java.net.*;
 public class TWClient
 {
 public static void main(String args[])
 {
-try
-{
+try{
 Socket s=new Socket("localhost",2020);
 DataInputStream in=new DataInputStream(s.getInputStream());
 DataOutputStream out=new DataOutputStream(s.getOutputStream());
@@ -18,7 +19,10 @@ out.writeUTF(str);
 str=in.readUTF();
 System.out.println(str);
 }
+
 }
-catch(Exception e) {}
+catch(Exception e){
+System.out.println(e);
+}
 }
 }

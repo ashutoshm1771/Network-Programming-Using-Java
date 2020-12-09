@@ -1,11 +1,13 @@
+//Author : Ashutosh Mishra
+
 import java.io.*;
 import java.net.*;
+
 public class TWServer
 {
 public static void main(String args[])
 {
-try
-{
+try{
 ServerSocket ss=new ServerSocket(2020);
 Socket s=ss.accept();
 DataInputStream in=new DataInputStream(s.getInputStream());
@@ -19,7 +21,10 @@ System.out.println(str);
 str=br.readLine();
 out.writeUTF(str);
 }
+
 }
-catch(Exception e) {}
+catch(Exception e){
+System.out.println(e);
+}
 }
 }
