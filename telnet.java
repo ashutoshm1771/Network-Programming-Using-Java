@@ -73,7 +73,7 @@ static class SendData extends telnet
 
 	static class ReceiveData extends telnet
 	{
-	BufferedReaderbr=null;
+	BufferedReader br=null;
 	ReceiveData(BufferedReader b)
 	{ br=b; }
 	public void run()
